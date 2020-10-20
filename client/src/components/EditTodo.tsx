@@ -9,7 +9,10 @@ const EditTodo = ({ todo }: IActionProps) => {
     e.preventDefault();
     try {
       const body = { description };
-      await fetch(`http://localhost:5000/todos/${todo.todo_id}`, {
+
+      // proxy 
+
+      await fetch(`/todos/${todo.todo_id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
