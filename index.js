@@ -12,8 +12,8 @@ app.use(express.json()); // req.body
 
 if (process.env.NODE_ENV === "production") {
   // serve static content
-  console.log('Enter here!!!!');
-  app.use(express.static(path.join(__dirname, "client/build")));
+  app.use(express.static('client/build'));
+  //app.use(express.static(path.join(__dirname, "client/build")));
 }
 
 
